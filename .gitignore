@@ -1,0 +1,6 @@
+.bitrise*
+.idea
+.vscode
+README.md.backup
+_tmp/
+.DS_Store
