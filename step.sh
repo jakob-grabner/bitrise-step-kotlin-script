@@ -4,7 +4,7 @@ THIS_SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 KOTLIN_SCRIPT_FILE="${THIS_SCRIPT_DIR}/script.main.kts"
 
 if [ "${kotlin_script}" == "" ]; then
-    echo " [!] kotlin_script environment is missing or empty - no Kotlin Script defined!"
+    echo " [!] kotlin_script environment var is missing or empty - no Kotlin Script defined!"
     exit 1
 fi
 
@@ -19,9 +19,6 @@ set +e
 
 cmd_ex_code=0
 echo "--- Running kotlin script ---"
-echo ""
 kotlin "${KOTLIN_SCRIPT_FILE}"
 cmd_ex_code=$?
-echo ""
-echo "---        finished       ---"
 exit $cmd_ex_code

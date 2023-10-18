@@ -10,9 +10,9 @@
 title: |-
   Kotlin Script
 summary: |
-  Step to execute kotlin script
+  Step to execute a kotlin script
 description: |
-  Step to execute kotlin script
+  Step to execute a kotlin script
 website: https://github.com/jakob-grabner/bitrise-step-kotlin-script
 source_code_url: https://github.com/jakob-grabner/bitrise-step-kotlin-script
 support_url: https://github.com/jakob-grabner/bitrise-step-kotlin-script/issues
@@ -84,3 +84,4 @@ inputs:
       summary: |
         Specify a directory - this will be set as the
         current working directory for the script
+      is_required: false
