@@ -67,7 +67,7 @@ toolkit:
 
 
 inputs:
-  - kotlin_script: |
+  - kotlin_content: |
       println("Hello World!")
     opts:
       title: "The Kotlin script"
