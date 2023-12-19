@@ -81,7 +81,5 @@ inputs:
       description: |
         Specify a directory - this will be set as the
         current working directory for the script
-      summary: |
-        Specify a directory - this will be set as the
-        current working directory for the script
+      summary: "Working Directory"
       is_required: false
