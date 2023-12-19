@@ -8,8 +8,12 @@ if [ "${kotlin_content}" == "" ]; then
     exit 1
 fi
 
-if [ -n "${script_run_dir}" ]; then
-    cd "${script_run_dir}"
+if [ ! -z "${working_dir}" ] ; then
+	cd "${working_dir}"
+	if [ $? -ne 0 ] ; then
+		echo " [!] Failed to switch to working directory: ${working_dir}"
+		exit 1
+	fi
 fi
 
 set -e

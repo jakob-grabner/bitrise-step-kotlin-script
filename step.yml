@@ -53,12 +53,12 @@ type_tags:
 # Use the `deps` property to declare dependencies that you can fetch from an OS dependency manager.
 # You can find more information about this in the documentation here:
 # https://devcenter.bitrise.io/en/steps-and-workflows/developing-your-own-bitrise-step/developing-a-new-step.html#submodules-and-step-dependencies
-#
-deps:
-  brew:
-  - name: kotlin
-  apt_get:
-  - name: kotlin
+# We need kotlin, but it is pre-installed on bitrise machines
+#deps:
+#  brew:
+#  - name: kotlin
+#  apt_get:
+#  - name: kotlin
 
 
 toolkit:
@@ -75,7 +75,7 @@ inputs:
       summary: "The Kotlin script to run"
       is_expand: false
       is_required: true
-  - script_run_dir: ""
+  - working_dir: "$BITRISE_SOURCE_DIR"
     opts:
       title: "Run in directory"
       description: |
